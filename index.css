@@ -1,0 +1,105 @@
+@font-face {
+  font-family: font1;
+  src: url(../fonts/Inter-ExtraBold.ttf);
+}
+@font-face {
+  font-family: font2;
+  src: url(../fonts/Merriweather-Light.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a, a:visited {
+  color: rgb(240, 240, 240);
+}
+
+body {
+  background: url(../img/bg.jpg) fixed center/cover;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1300px;
+  font-family: font2, serif;
+}
+body::before {
+  content: "";
+  position: absolute;
+  background: rgb(17, 17, 17);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-animation: animbefore 1.5s ease forwards;
+          animation: animbefore 1.5s ease forwards;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+@-webkit-keyframes animbefore {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes animbefore {
+  to {
+    opacity: 0;
+  }
+}
+
+.btn {
+  border: 2px solid rgb(17, 17, 17);
+  background: none;
+  width: 150px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: 0.2s;
+  font-family: font1, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.btn:hover {
+  transform: scale(1.04);
+}
+
+header {
+  color: rgb(240, 240, 240);
+  position: relative;
+}
+header .header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+  opacity: 0;
+  -webkit-animation: animheader 1.5s ease forwards;
+          animation: animheader 1.5s ease forwards;
+  transform: translateY(45px);
+}
+@-webkit-keyframes animheader {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes animheader {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+img {
+  width: 50%;
+}/*# sourceMappingURL=index.css.map */
